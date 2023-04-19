@@ -31,10 +31,12 @@ const Post = () => {
           src="https://unsplash.com/photos/iEEBWgY_6lA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjgxODQ5ODYy&force=true&w=640"
           alt="Avatar Icon"
         />
-        <ChatBubbleOutlineIcon />
-        <RepeatIcon />
-        <FavoriteBorderIcon />
-        <PublishIcon />
+        <div className="post-footer">
+          <ChatBubbleOutlineIcon fontSize="small" />
+          <RepeatIcon fontSize="small" />
+          <FavoriteBorderIcon fontSize="small" />
+          <PublishIcon fontSize="small" />
+        </div>
       </div>
     </div>
   );
