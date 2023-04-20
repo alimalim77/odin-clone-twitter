@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 import Widget from "./components/Widget";
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="App">
       <Sidebar />

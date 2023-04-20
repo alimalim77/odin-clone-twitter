@@ -7,7 +7,7 @@ import {
 } from "react-twitter-embed";
 import { Search } from "@material-ui/icons";
 
-const Widget = () => {
+const Widget: React.FC = () => {
   return (
     <div className="widgets">
       <div className="widgets-input">
