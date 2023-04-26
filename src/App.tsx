@@ -2,15 +2,16 @@ import React from "react";
 import "./App.css";
 import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
-import Post from "./components/Post";
+import Widget from "./components/Widget";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <Sidebar />
       <Feed />
+      <Widget />
     </div>
   );
-}
+};
 
 export default App;

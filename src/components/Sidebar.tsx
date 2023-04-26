@@ -12,18 +12,29 @@ import MoreHorizon from "@material-ui/icons/MoreHoriz";
 import "./Sidebar.css";
 import { Button } from "@material-ui/core";
 
-const Sidebar = () => {
+interface SidebarOption {
+  Icon: React.ElementType;
+  text: string;
+}
+
+const Sidebar: React.FC = () => {
+  const sidebarOptions: SidebarOption[] = [
+    { Icon: HomeIcon, text: "Home" },
+    { Icon: SearchIcon, text: "Search" },
+    { Icon: NotificationsNoneIcon, text: "Notifications" },
+    { Icon: MailOutlineIcon, text: "Mail" },
+    { Icon: BookmarkBorderIcon, text: "Bookmarks" },
+    { Icon: ListAltIcon, text: "Lists" },
+    { Icon: PermIdentityIcon, text: "Identity" },
+    { Icon: MoreHorizon, text: "More" },
+  ];
+
   return (
     <div className="sidebar">
       <TwitterIcon className="sidebar-twitterIcon" />
-      <SidebarOptions Icon={HomeIcon} text="Home" />
-      <SidebarOptions Icon={SearchIcon} text="Search" />
-      <SidebarOptions Icon={NotificationsNoneIcon} text="Notifications" />
-      <SidebarOptions Icon={MailOutlineIcon} text="Mail" />
-      <SidebarOptions Icon={BookmarkBorderIcon} text="Bookmarks" />
-      <SidebarOptions Icon={ListAltIcon} text="Lists" />
-      <SidebarOptions Icon={PermIdentityIcon} text="Identity" />
-      <SidebarOptions Icon={MoreHorizon} text="More" />
+      {sidebarOptions.map((option, index) => (
+        <SidebarOptions key={index} Icon={option.Icon} text={option.text} />
+      ))}
       <Button className="sidebar-tweet" variant="outlined">
         Tweet
       </Button>

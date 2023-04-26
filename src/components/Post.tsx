@@ -7,34 +7,50 @@ import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
-const Post = () => {
+interface PostProps {
+  displayName: string;
+  userName: string;
+  verified: boolean;
+  text: string;
+  image: string;
+  avatar: string;
+}
+
+const Post: React.FC<PostProps> = ({
+  displayName,
+  userName,
+  verified,
+  text,
+  image,
+  avatar,
+}) => {
   return (
     <div className="post">
       <div className="post-avatar">
-        <Avatar />
+        <Avatar src={avatar} />
       </div>
       <div className="post-body">
         <div className="post-header">
           <div className="post-header-text">
             <h3>
-              Display Name
+              {displayName}
               <span className="post-header-special">
-                <VerifiedUserIcon />
+                {verified && <VerifiedUserIcon className="post-badge" />}@
+                {userName}
               </span>
             </h3>
           </div>
           <div className="post-header-description">
-            <p>Hello from the other side</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img
-          src="https://unsplash.com/photos/iEEBWgY_6lA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjgxODQ5ODYy&force=true&w=640"
-          alt="Avatar Icon"
-        />
-        <ChatBubbleOutlineIcon />
-        <RepeatIcon />
-        <FavoriteBorderIcon />
-        <PublishIcon />
+        <img src={image} alt="character image" />
+        <div className="post-footer">
+          <ChatBubbleOutlineIcon fontSize="small" />
+          <RepeatIcon fontSize="small" />
+          <FavoriteBorderIcon fontSize="small" />
+          <PublishIcon fontSize="small" />
+        </div>
       </div>
     </div>
   );

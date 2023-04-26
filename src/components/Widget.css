@@ -1,0 +1,22 @@
+.widgets {
+    flex: 0.3;
+}
+
+.widgets-input {
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px 20px 0 0;
+}
+
+.widgets-input > input {
+    border: none;
+    background-color: whitesmoke;
+    outline: none;
+}
+
+.share-btn {
+    margin-top : 15px;
+}

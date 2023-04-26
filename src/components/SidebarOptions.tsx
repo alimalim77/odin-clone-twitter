@@ -6,7 +6,7 @@ type SidebarOptionsProps = {
   text: string;
 };
 
-const SidebarOptions = ({ Icon, text }: SidebarOptionsProps) => {
+const SidebarOptions: React.FC<SidebarOptionsProps> = ({ Icon, text }) => {
   return (
     <div className="sidebar-options">
       <Icon />
