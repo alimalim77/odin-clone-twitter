@@ -16,7 +16,7 @@ const Widget: React.FC = () => {
       </div>
       <div className="widget-container">
         <h2>Whats Happening</h2>
-        <TwitterTweetEmbed tweetId={"1550073471283392512"} />
+        <TwitterTweetEmbed tweetId="1550073471283392512" />
         <TwitterTimelineEmbed
           sourceType="profile"
           screenName="alymemememe"

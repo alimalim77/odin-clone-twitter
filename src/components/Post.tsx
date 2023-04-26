@@ -44,7 +44,7 @@ const Post: React.FC<PostProps> = ({
             <p>{text}</p>
           </div>
         </div>
-        <img src={image} alt="" />
+        <img src={image} alt="character image" />
         <div className="post-footer">
           <ChatBubbleOutlineIcon fontSize="small" />
           <RepeatIcon fontSize="small" />

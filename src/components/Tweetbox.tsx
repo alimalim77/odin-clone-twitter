@@ -3,13 +3,13 @@ import { Avatar, Button } from "@material-ui/core";
 import "./Tweetbox.css";
 import db from "../firebase";
 
-type TweetboxProps = {};
-
-const Tweetbox: React.FC<TweetboxProps> = () => {
+const Tweetbox: React.FC = () => {
   const [tweetMessage, setTweetMessage] = useState<string>("");
   const [tweetImage, setTweetImage] = useState<string>("");
 
-  const sendTweet = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const sendTweet = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ): void => {
     e.preventDefault();
 
     db.collection("posts").add({

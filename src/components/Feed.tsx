@@ -18,17 +18,17 @@ const Feed: React.FC = () => {
 
   useEffect(() => {
     const unsubscribe = db.collection("posts").onSnapshot((snapshot) => {
-      const data = snapshot.docs.map((doc) => {
-        return {
-          // Map the properties from the document data
-          avatar: doc.data().avatar,
-          displayName: doc.data().displayName,
-          image: doc.data().image,
-          text: doc.data().text,
-          userName: doc.data().userName,
-          verified: doc.data().verified,
-        } as PostData; // Cast the object
-      });
+      const data = snapshot.docs.map(
+        (doc) =>
+          ({
+            avatar: doc.data().avatar,
+            displayName: doc.data().displayName,
+            image: doc.data().image,
+            text: doc.data().text,
+            userName: doc.data().userName,
+            verified: doc.data().verified,
+          } as PostData)
+      );
       setPosts(data);
     });
 
