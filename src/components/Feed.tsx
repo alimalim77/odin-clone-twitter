@@ -13,7 +13,7 @@ interface PostData {
   verified: boolean;
 }
 
-const Feed: React.FC = (): JSX.Element => {
+const Feed: React.FC = () => {
   const [posts, setPosts] = useState<PostData[]>([]);
 
   useEffect(() => {
